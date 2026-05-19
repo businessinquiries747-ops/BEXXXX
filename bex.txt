@@ -1,0 +1,228 @@
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("X-Auth-Token", "i450112-19gn-6b65-tueh-65av1bt89");
+
+const raw = JSON.stringify({
+  "shipmentslist": [
+    {
+      "shipmentId": 0,
+      "serviceSpeed": 1,
+      "shipmentType": 1,
+      "shipmentCategory": 1,
+      "shipmentWeight": 0,
+      "totalPackages": 1,
+      "invoiceAmount": 0,
+      "shipmentContents": 17,
+      "commentPublic": "POŠTARINU PLAĆA POŠILJALAC",
+      "commentPrivate": "Interna napomena",
+      "personalDelivery": false,
+      "returnSignedInvoices": false,
+      "returnSignedConfirmation": false,
+      "returnPackage": false,
+      "payType": 6,
+      "insuranceAmount": 0,
+      "payToSender": 1500,
+      "payToSenderViaAccount": false,
+      "sendersAccountNumber": "",
+      "bankTransferComment": "",
+      "tasks": [
+        {
+          "type": 1,
+          "nameType": 177395,
+          "name1": "177395",
+          "name2": "",
+          "adressType": 1,
+          "place": "SUBOTICA 24000",
+          "street": "FOČANSKA",
+          "houseNumber": 24,
+          "contactPerson": "AKCIJSKA ROBA",
+          "phone": "0629658205",
+          "timeFrom": "08:20",
+          "timeTo": "15:40",
+          "parcelShop": 0
+        },
+        {
+          "type": 2,
+          "nameType": 1,
+          "name1": "Prezime Primaoca",
+          "name2": "Ime Primaoca",
+          "adressType": 1,
+          "place": "NOVI SAD",
+          "street": "Kisačka",
+          "houseNumber": 10,
+          "contactPerson": "Ime Prezime",
+          "phone": "0634884757",
+          "preNotification": 60,
+          "comment": "API Test",
+          "parcelShop": 0
+        }
+      ]
+    }
+  ]
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://api.bex.rs:62503/ship/api/Ship/postShipments", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ODGOVOR
+
+{
+    "shipmentsResultList": [
+        {
+            "state": true,
+            "shipmentId": 266143282,
+            "err": ""
+        }
+    ],
+    "reqstate": true,
+    "reqerr": ""
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////
+
+PRACENJE STANJA
+
+
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("X-Auth-Token", "i450112-19gn-6b65-tueh-65av1bt89");
+
+const raw = "";
+
+const requestOptions = {
+  method: "GET",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://integrations.bexexpress.rs/api/Shipments/shipmentHistory?trackingValue=255658625", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////
+
+
+STAMPANJE ADRESNICE
+
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("X-Auth-Token", "i450112-19gn-6b65-tueh-65av1bt89");
+
+const raw = "";
+
+const requestOptions = {
+  method: "GET",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://integrations.b3x.rs/api/Shipments/GetLabelWithProperties?pageSize=4&pagePosition=0&shipmentId=266144528&parcelNo=0", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+
+
+
+
+///////////////////////////////////////////////////////////////
+
+
+
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("X-Auth-Token", "i450112-19gn-6b65-tueh-65av1bt89");
+
+const raw = JSON.stringify({
+  "shipmentid": 266143282,
+  "mtype": 1,
+  "lang": 1
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://api.bex.rs:62503/ship/api/Ship/deleteShipments", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+
+
+
+
+
+ODGOVOR 
+
+
+
+{
+    "state": true,
+    "shipmentId": 266143282,
+    "err": ""
+}
+
+
+
+///////////////////////////////////////////////////////////
+
+
+
+
+
