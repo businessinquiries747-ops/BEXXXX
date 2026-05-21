@@ -13,7 +13,7 @@ const raw = JSON.stringify({
       "totalPackages": 1,
       "invoiceAmount": 0,
       "shipmentContents": 17,
-      "commentPublic": "POŠTARINU PLAĆA POŠILJALAC",
+      "commentPublic": "", //tu neka pisu sifre proizvoda i kolicina tipa 25x2; 16x1;
       "commentPrivate": "Interna napomena",
       "personalDelivery": false,
       "returnSignedInvoices": false,
