@@ -28,14 +28,14 @@ const raw = JSON.stringify({
       "tasks": [
         {
           "type": 1,
-          "nameType": 177395,
-          "name1": "177395",
+          "nameType": 2,
+          "name1": "AKCIJSKA ROBA",
           "name2": "",
           "adressType": 1,
           "place": "SUBOTICA 24000",
           "street": "FOČANSKA",
           "houseNumber": 24,
-          "contactPerson": "AKCIJSKA ROBA",
+          "contactPerson": "ALEKSANDAR ĐORDAN",
           "phone": "0629658205",
           "timeFrom": "08:20",
           "timeTo": "15:40",
